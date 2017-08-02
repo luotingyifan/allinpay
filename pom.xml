@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mcpayment.gw2.hm</groupId>
+    <artifactId>mcp-gw2-hm-new-allinpay</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <gw2.parent.version>2.2.2</gw2.parent.version>
+        <gw2.common.version>2.7.1-MODULARIZATION-SNAPSHOT</gw2.common.version>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mcpayment.gw2</groupId>
+            <artifactId>gw2-parent</artifactId>
+            <type>pom</type>
+            <version>${gw2.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mcpayment.gw2.common</groupId>
+            <artifactId>gw2-common</artifactId>
+            <version>${gw2.common.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.7.2</version>
+                <configuration>
+                    <forkMode>once</forkMode>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>mcp-releases-repo</id>
+            <url>${mcp-releases-deployment-url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>mcp-releases-repo</id>
+            <url>${mcp-snapshots-deployment-url}</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>
