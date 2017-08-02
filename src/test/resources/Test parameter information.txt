@@ -1,0 +1,12 @@
+General test merchant number: 100020091218001
+md5 key: 1234567890
+
+Customs clearance test, merchant number as follows:
+100020091218098  Weifang pass test merchant
+100020091218099  Chongqing pass test merchant
+100020091214455  Zhengzhou pass test merchant
+100020091214456  Guangzhou pass test merchant
+100020091214454  Ji'nan pass test merchant
+100020091214453  Xi'an pass test merchant
+
+md5key: 1234567890
